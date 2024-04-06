@@ -1,0 +1,279 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+.login-form {
+  max-width: 350px;
+  margin: 150px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.login-form:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+.video-rounded {
+  border-radius: 10px; /* Задаем радиус скругления углов */
+  overflow: hidden; /* Обрезаем видео, чтобы углы были скруглены */
+}
+
+#capture:hover svg path{
+  fill:white
+}
+.form-control {
+  background-color: #ffffff;
+  border: 1px solid #495057;
+  color: #495057;
+  font-family: 'Arial', sans-serif;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #495057;
+  color: #495057;
+}
+
+.hmlb{
+filter:
+drop-shadow(3px 3px 10px #000000);
+}
+.none {
+    -webkit-filter: none;
+    filter: none;
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.grayscale {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.invert {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.sepia {
+    -webkit-filter: sepia(1);
+    filter: sepia(1);
+}
+
+button#snapshot {
+    margin: 0 10px 25px 0;
+    width: 110px;
+}
+
+video {
+    object-fit: cover;
+}
+#video-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  #capture {
+    display: block;
+    margin: 20px auto;
+  }
+  .rounded-img {
+    width: 200px;
+    height: 200px;
+}
+.image{
+    height: 12.5vw;
+    width: 13vw;
+    border-radius: 50%;
+}
+.avatar-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 15px 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    max-height: 150px;
+    overflow-y: hidden;
+    position: relative;
+  }
+  .avatar-scroll::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari, и Opera */
+  }
+
+  
+  .avatar-wrapper {
+    display: flex;
+    gap: 20px;
+    position: relative; /* Добавили позиционирование, необходимо для SimpleBar */
+  }
+  
+  /* Подключаем стили SimpleBar */
+  .scrollbar-horizontal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .avatar {
+    flex: 0 0 auto;
+    width: 100px; /* ширина аватара */
+    height: 100px; /* высота аватара */
+    border-radius: 50%;
+    margin: 0 10px;
+    overflow: hidden; /* скрываем избыточные части изображения */
+    position: relative; /* установка позиции для использования псевдоэлемента */  
+      border-radius: 50%; /* создаем круглую рамку */
+      border: 1px solid black;
+  }
+  
+  .agreement-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    transition: opacity 0.5s ease;
+  }
+
+  
+  .avatar img {
+    width: 100%; /* полная ширина внутри .avatar */
+    height: 100%; /* полная высота внутри .avatar */
+    object-fit: cover; /* изображение сохранит свои пропорции и полностью заполнит контейнер */
+  }
+  
+
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: #ffffff;
+  }
+
+/* .blur-circle1{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom,rgb(4, 4, 4),rgb(67, 60, 61));
+    border-radius: 50%;
+    filter:blur(120px);
+    position: absolute;
+    left: 10%;
+    top:20%;
+}
+.blur-circle2{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom,white,pink);
+    border-radius: 50%;
+    filter:blur(100px);
+    position: absolute;
+    right: 10%;
+    top:20%;
+} */
+@media (max-width: 768px) {
+  .square {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+.square {
+  position: relative;
+  width: 35vw; height: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .square .one {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+  transition: 0.9s;
+  animation: animate 6s linear infinite;
+  
+  }
+  
+  .twitch:hover .one {
+  border: none;
+  background:rgb(20, 36, 50);;
+  }
+  
+  .square .two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.9s;
+  animation: animate 6s linear infinite;
+  }
+  
+  .twitch:hover .two {
+  border: none;
+  background: rgb(20, 36, 50);;
+  
+  }
+  
+  
+  
+  
+  .square .three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
+  transition: 0.5s;
+  animation: animate2 10s linear infinite;
+  }
+  .twitch:hover .three {
+  border: none;
+  background:rgb(20, 36, 50);;
+  }
+  
+  .circle {
+  position: relative;
+  padding: 40px 60px;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1000;
+  }
+  
+  .square:hover{
+  color: white;
+  }
+  
+  .content:hover {
+  
+  color: #ffffff;
+  }
+  
+  @keyframes animate {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  
+  @keyframes animate2 {
+      0% {
+          transform: rotate(360deg);
+      }
+      100% {
+          transform: rotate(0deg);
+      }
+  
+  }
